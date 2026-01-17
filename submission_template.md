@@ -139,8 +139,8 @@ Why?
 > This function counts the number of valid email addresses in the input list. It safely ignores invalid entries and handles empty input correctly.
 
 ### Issues in original explanation
-- The original code does NOT safely ignore invalid entries—it accepts almost anything with an "@" symbol
-- Original code doesn't handle None or empty list—it would crash or behave unexpectedly
+- The original code does NOT safely ignore invalid entries, it accepts almost anything with an "@" symbol
+- Original code doesn't handle None or empty list, it would crash or behave unexpectedly
 - Doesn't explain what makes an email valid
 
 ### Rewritten explanation
@@ -230,6 +230,6 @@ Why focus on these?
 ## 4) Final Judgment
 - Decision: Approve
 
-- Justification: The correct_task3.py properly addresses all bugs from the original implementation. It includes explicit type checking with `isinstance(v, (int, float))` to prevent type errors, excludes booleans with `and not isinstance(v, bool)` to avoid treating True/False as 1/0, counts only valid measurements for the denominator ensuring mathematical correctness, handles empty input by returning None, and protects against division by zero when all values are invalid.
+- Justification: The function properly addresses all bugs from the original implementation. It includes explicit type checking with `isinstance(v, (int, float))` to prevent type errors, excludes booleans with `and not isinstance(v, bool)` to avoid treating True/False as 1/0, counts only valid measurements for the denominator ensuring mathematical correctness, handles empty input by returning None, and protects against division by zero when all values are invalid.
 
 - Confidence & unknowns: High confidence. The code correctly handles all identified edge cases and follows best practices. Unknown: Preference for return values (None vs 0 vs exceptions for edge cases), whether exotic numeric types like Decimal or numpy arrays need support, and whether infinity/NaN values should be explicitly filtered.
