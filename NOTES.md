@@ -47,10 +47,3 @@ For all three tasks, I focused testing considerations on:
 2. **Edge cases**: Empty, single-item, boundary conditions
 3. **Error conditions**: Invalid types, malformed data, None values
 4. **Business logic**: Cancelled orders, invalid emails, mixed types
-
-In a real production environment, I would:
-- Write comprehensive unit tests using pytest
-- Add property-based tests using hypothesis for edge case discovery
-- Include integration tests with realistic datasets
-- Add performance benchmarks for large inputs
-- Document expected behavior in docstrings with examples
